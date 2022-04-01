@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="font-weight: bold;">FAB BAG: Monthly & Beauty Subscription for Women.</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/55beaada1a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+    }
+       #navbar{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        width: 100%;
+        height: 15%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        margin: 0 auto;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    #subscribe{
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        width: 15%;
+        height: 30%;
+        transform: translate(-50%,-50%);
+        display: inline-flex;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    #subscribe h4{
+        font-weight: bold;
+        color: #e5b95f;
+        font-size: large;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    #icon{
+        position: relative;
+        top: 55%;
+        left: 88%;
+        width: 10%;
+        height: 25%;
+        transform: translate(-50%,-50%);
+        display: grid ;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 10px;
+        background-color: transparent;
+        
+    }
+    #logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15%;
+        height: 50%;
+        transform: translate(-50%,-50%);
+        display: inline-flex;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    #drop_down_icon{
+        position: relative;
+        height: 20px; ;
+       left: 84%;
+       top: 40%;
+        display: block ;
+        background-color: transparent;
+    }
+    #drop_down{
+        display: none;
+        position: absolute;
+        
+        background-color: white;
+        min-width: 160px;
+        
+        z-index: 1;
+    }
+    #drop_down a{
+        color: black;
+        padding: 12px 16px;
+        display: block;
+    }
+    #drop_down a:hover{
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+    }
+    #drop_down_icon:hover #drop_down{
+        display: block;
+        right: 0;
+    }
+    #drop_down_icon:hover .far fa-user-circle {
+        background-color: black;
+    }
+    a{
+        text-decoration: none;
+        font-size: 15px;
+    }
+    a:hover{
+        text-decoration: none;
+
+    }
+i{
+    color: #e5b95f;
+}
+#main_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1366px;
+    height: 450px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    background-color: transparent;
+}
+#image_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1366px;
+    height: 450px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    background-color: black;
+}
+.menu_toggle{
+    color: black;
+    margin-left: 70%;
+    margin-top: 2.5%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+#mobile_icon{
+    display: none;
+}
+#what_container{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    width: 1300px;
+    height: 80px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    
+} 
+#text_main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 50px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+    
+}
+#line{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 1000px;
+    height: 50px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    background-color: rgb(14, 13, 13)
+
+}
+
+</style>
+<body>
+<div id="head">
+
+</div>
+<div id="main_container">
+    <div id="image_container">
+        <img src="" alt="" id="slide">
+    </div>
+
+</div>
+<div id="what_container">
+    <div id="text_main">
+<h1>WHAT'S IN THE BAG</h1>
+
+    </div>
+
+</div>
+ 
+     <div id="line">
+
+     </div>
+ 
+
+
+    
+</body>
+</html>
+
+<script type="module">
+
+    import navbar from "/navbar.js";
+    let head = document.getElementById("head");
+    head.innerHTML = navbar();
+
+</script>
+
+
+<script src="/scripts/index.js">
+
+</script>

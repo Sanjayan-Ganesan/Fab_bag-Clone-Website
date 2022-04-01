@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-in</title>
+    <script src="https://kit.fontawesome.com/55beaada1a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+     #navbar_main{
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        width: 97%;
+        height: 10%;
+        padding: 20px;
+        transform: translate(-50%,-50%);
+        display: inline-flex;
+        text-align: center;
+        background-color: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+    }
+    #subscribe_box{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 20%;
+        height: 0.00001px;
+        padding: 15px;
+        transform: translate(-50%,-50%);
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 10px;
+        justify-content: space-around;
+        text-align: center;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    #logo_box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15%;
+        height: 0.1px;
+        padding: 20px;
+        transform: translate(-50%,-50%);
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 10px;
+        justify-content: space-around;
+        text-align: center;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    #icon_box{
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        width: 15%;
+        height: 0.1px;
+        padding: 20px;
+        transform: translate(-50%,-50%);
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 10px;
+        justify-content: space-around;
+        text-align: center;
+        background-color: rgb(253, 253, 253);
+        cursor: pointer;
+    }
+    #drop_down_icon{
+        position: absolute;
+        height: 20px; ;
+       left: 80%;
+       top: 50%;
+        display: block ;
+        background-color: transparent;
+    }
+    i{
+        color: #e5b95f;
+    }
+    #drop_down{
+        display: none;
+        position: absolute;
+        
+        background-color: white;
+        min-width: 160px;
+        
+        z-index: 1;
+    }
+    #drop_down a{
+        color: black;
+        padding: 12px 16px;
+        display: block;
+        
+    }
+    #drop_down a:hover{
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+    }
+    #drop_down_icon:hover #drop_down{
+        display: block;
+        right: 0;
+    }
+    #drop_down_icon:hover .far fa-user-circle {
+        background-color: black;
+    }
+    a{
+        text-decoration: none;
+        font-size: 15px;
+    }
+    a:hover{
+        text-decoration: none;
+
+    }
+    #login_text{
+        position: absolute;
+        top: 130%;
+        left: 50%;
+        width: 300px;
+        height: 20px;
+        padding: 20px;
+        transform: translate(-50%,-50%);
+        display: inline-flex;
+        text-align: center;
+        justify-content: center;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    #form_box{
+        position: absolute;
+        top: 400%;
+        left: 50%;
+        width: 350px;
+        height: 300px;
+        padding: 20px;
+        transform: translate(-50%,-50%);
+        display: block;
+        text-align: center;
+        justify-content: center;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    #footer_main{
+    position: absolute;
+    top: 850%;
+        left: 50%;
+        width: 1300px;
+        height: 400px;
+        padding: 20px;
+        transform: translate(-50%,-50%);
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        grid-gap: 1px;
+       
+        text-align: center;
+        justify-content: center;
+        background-color:transparent;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+#information_container{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 220px;
+    height: 300px;
+    transform: translate(-50%,-50%);
+    display: block;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+}
+#information_container a{
+    color: rgb(85, 85, 85);
+}
+#information_container a:hover{
+    color: #e5b95f;
+}
+#customer_container{
+    position: absolute;
+    top: 32.5%;
+    left: 50%;
+    width: 300px;
+    height: 150px;
+    transform: translate(-50%,-50%);
+    display: block;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+}
+#customer_container p {
+    color: rgb(85, 85, 85);
+}
+#customer_container h4{
+    color: rgb(85, 85, 85);
+}
+#news_container{
+    position: absolute;
+    top: 38%;
+    left: 85%;
+    width: 300px;
+    height: 200px;
+    transform: translate(-50%,-50%);
+    display: block;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+}
+#news_container input{
+    width: 180px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+#news_container button{
+    width: 110px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    background-color: #e5b95f;
+}
+#social_icon{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 300px;
+    height: 50px;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+}
+#copy_contain{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 400px;
+    height: 50px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+}
+</style>
+<body>
+    <div id="navbar_main">
+        <div id="subscribe_box">
+            <h4 style="color: #e5b95f;font-family:Verdana, Geneva, Tahoma, sans-serif;">SUBSCRIBE NOW</h4>
+        
+        </div>
+        <div id="logo_box">
+        <img src="https://cdn.shopify.com/s/files/1/0052/7551/6995/files/FABBAG-LOGO_96ac9306-4c81-4ab8-8d2b-4e818eed7f76_2048x.png?v=1606482289" style="width: 100%;margin-top: -13%;" onclick="window.location.href=`index.html`">
+        </div>
+        <div id="icon_box">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-shopping-cart" onclick="window.location.href=`checkout.html`"></i>
+            <div id="drop_down_icon">
+                <i class="far fa-user-circle" ></i>
+                       <div id="drop_down">
+                           
+                          <a href="signin.html">Sign-in</a>
+                           
+                           <a href="account.html">Create an Account</a>
+                           
+                          <a href="checkout.html">Check Out</a>
+                          
+                       </div>
+                   </div>
+        </div>
+
+
+        <div id="login_text">
+            <h1>Sign In</h1>
+        </div>
+
+        <div id="form_box">
+            <form>
+                <label style="margin-left: -58%;">Email Address</label>
+                <br>
+                <p>
+                
+                </p>
+                    <input type="text" id="email" style="width: 300px;height: 30px;border: 1px solid rgb(165, 165, 165);border-radius: 5px;" >
+                    <br>
+                    <p>
+                
+                    </p>
+                    <label style="margin-left: -66%;">Password</label>
+                    
+                    <br>
+                    <p>
+                
+                    </p>
+                    <input type="password" id="pass" style="width: 300px;height: 30px;border: 1px solid rgb(165, 165, 165);border-radius: 5px;">
+                    <br>
+                    <p>
+
+                    </p>
+                    <input type="submit" value="Sign In" style="width: 300px;height: 30px;background-color: #e5b95f;border: none;cursor: pointer;">
+                    </form>
+        </div>
+
+        <div id="footer_main">
+            <div id="information_container">
+                <h3>INFORMATION</h3>
+                <a href="#">About Us</a>
+                <br>
+                <p></p>
+                <a href="#">Associated Brands</a>
+                <br>
+                <p></p>
+                <a href="#">FAQ</a>
+                <br>
+                <p></p>
+                <a href="#">Collaborate with Fab Bag</a>
+                <br>
+                <p></p>
+                <a href="#">Contact Us</a>
+                <br>
+                <p></p>
+                <a href="#">Returns & Refunds</a>
+                <br>
+                <p></p>
+                <a href="#">Terms & Conditions</a>
+                <br>
+                <p></p>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div id="customer_container">
+            <h3>CUSTOMER CARE</h3>
+            <h4>Call:022-6805-6010</h4>
+            <p>(Monday to Friday : 9 AM - 7 PM)</p>
+            
+            <h4>Mail:crew@fabbag.com</h4>
+            </div>
+            
+            <div id="news_container">
+                <h3>NEWS LETTER</h3>
+                <p>Signup for the latest offers,updates and news</p>
+                <br>
+                <input type="text" placeholder="Your email address">
+                <button>Subscribe Now</button>
+                <br>
+                <p>Don't Worry We don't spam</p>
+            </div>
+            
+            <div id="social_icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div id="copy_contain">
+                <p>Copyright 2021 fabbag.com All Rights Reserved</p>
+            </div>
+        </div>
+    
+</body>
+</html>
+
+
+<script src="/scripts/login.js">
+
+</script>
