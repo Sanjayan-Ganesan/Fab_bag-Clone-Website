@@ -23,3 +23,6 @@
 <h2>Reference Image</h2>
 
 <img src="https://miro.medium.com/max/1219/1*6OoPz9bchoT2mV9o9EdtFQ.jpeg"></img>
+<img src="https://miro.medium.com/max/1218/1*1a0tB5e3ObLX6BDwDARvZg.jpeg"></img>
+<img src="https://miro.medium.com/max/1217/1*tiX7y_QYEbtEh-2i7d2aBA.jpeg"></img>
+<img src="https://miro.medium.com/max/1221/1*T2fXUU09TKN8MVTm7h4URg.jpeg"></img>
