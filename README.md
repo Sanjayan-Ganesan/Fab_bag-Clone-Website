@@ -2,8 +2,19 @@
 
 
 
-<h3>About</h3>
+<h2>About</h2>
 
 <h5>FAB BAG is India's Largest Beauty Subscription Service,FAB BAG Used to sell Sample/Full Size Products 
  <br></br>
  atleast Twice the Price You Pay in a Delightful bag Every Month </h5>
+ 
+ 
+<h2>Features</h2>
+
+<ul>
+ <li>Home Page</li>
+ <li>Product Page</li>
+ <li>Cart Page</li>
+ <li>Payment Page</li>
+ <li>Full Flow Website</li>
+</ul>
